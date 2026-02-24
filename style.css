@@ -1,0 +1,311 @@
+/* reset and base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: transparent;
+    color: #fff;
+    padding: 20px 10px 80px 10px;
+}
+
+.header-card {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(20,27,44,0.95), rgba(12,18,32,0.95));
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.header-left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.profile img {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.08);
+    background: linear-gradient(135deg,#1f2937,#111827);
+    padding: 4px;
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.header-info p {
+    margin: 4px 0;
+    opacity: 0.9;
+}
+
+.bio {
+    color: rgba(255,255,255,0.85);
+    margin-top: 8px;
+    max-width: 620px;
+}
+
+.badges {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badges .badge {
+    background: rgba(255,255,255,0.04);
+    color: #cfe2ff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* navegación tipo píldora */
+.header-nav {
+    flex: 1;
+}
+
+.tabs {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 0 0 0;
+    margin: 0;
+}
+
+.tabs .tab {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: transparent;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.tabs .tab.active,
+.tabs .tab:hover {
+    background: #3b66ff;
+    color: #fff;
+    border-color: rgba(59,102,255,0.9);
+}
+
+.header-right.social a {
+    color: rgba(255,255,255,0.9);
+    margin: 0 6px;
+    font-size: 1.2rem;
+    transition: color 0.2s, transform 0.15s;
+}
+
+.header-right.social a:hover { color: #3b66ff; transform: translateY(-2px); }
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+header nav ul li {
+    margin: 5px 10px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #e8491d;
+}
+
+main {
+    max-width: 1100px;
+    margin: 20px auto 120px auto;
+    padding: 0 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #35424a;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* responsive breakpoints */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+    main {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-left { width: 100%; }
+    .header-info { width: 100%; }
+    .bio { max-width: 100%; }
+    .header-right { width: 100%; text-align: left; margin-top: 8px; }
+    .tabs { width: 100%; justify-content: flex-start; gap: 8px; padding-top: 14px; }
+}
+
+
+@media (max-width: 425px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+    header nav ul li a {
+        padding: 4px 8px;
+    }
+}
+
+/* estilos para las tarjetas de contenido */
+.card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.card .muted { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+.card h3 { margin: 8px 0; }
+
+/* About section */
+.about-section h2,
+.gallery-section h2 { margin: 0 0 10px 0; color: #e6eefc }
+.about-inner {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.about-inner img {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.04);
+}
+.about-text p { color: rgba(255,255,255,0.9); }
+
+/* Gallery grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+.gallery .gallery-item {
+    background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.15));
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+.gallery .gallery-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .about-inner { flex-direction: column; align-items: center; text-align: center; }
+    .about-inner img { width: 120px; height: 120px; }
+}
+
+/* Carousel styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.carousel-viewport {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(.22,.9,.36,1);
+    will-change: transform;
+}
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.carousel-slide img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10,14,24,0.6);
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(2,6,23,0.6);
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.carousel-btn:hover { transform: translateY(-50%) scale(1.03); }
+.carousel-dots { display:flex; gap:8px; justify-content:center; margin-top:10px; }
+.carousel-dots button { width:10px; height:10px; border-radius:50%; border:none; background:rgba(255,255,255,0.15); cursor:pointer; }
+.carousel-dots button.active { background:#3b66ff; }
+
+@media (max-width: 768px) {
+    .carousel-slide img { height: 240px; }
+    .carousel-btn { font-size: 22px; padding:6px 10px; }
+}
+
+/* remove old grid when using carousel - keep CSS in case needed */
+.gallery { display: none; }
