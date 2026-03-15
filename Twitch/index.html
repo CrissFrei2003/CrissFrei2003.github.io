@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twitch - Home</title>
+  <link rel="stylesheet" href="../shared/styles/shared.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+</head>
+<body class="twitch-dark">
+  <header class="site-header">
+    <div class="header-left">
+      <button id="menuToggle" class="menu-btn" aria-label="Abrir menú">☰</button>
+      <div class="logo">TWITCH</div>
+    </div>
+    <div class="header-center">
+      <div class="search">
+        <input type="search" placeholder="Buscar canales y juegos" id="searchInput">
+        <button id="searchBtn">🔍</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn" title="Notificaciones">🔔</button>
+      <button class="icon-btn" title="Mensajes">💬</button>
+      <button class="profile-btn">Perfil</button>
+    </div>
+  </header>
+
+  <div class="app">
+    <aside class="left-sidebar" id="leftSidebar">
+      <div class="channels-list">
+        <div class="channels-title">CANALES</div>
+        <ul>
+          <li class="channel-item">
+            <img src="CANAL/EmiillioR/logo.jpg" alt="EmiillioR logo" class="ch-logo">
+            <div class="ch-meta">
+              <div class="ch-name">EmiillioR</div>
+              <div class="ch-sub">2.1K espectadores</div>
+            </div>
+          </li>
+          <li class="channel-item">
+            <img src="CANAL/juansguarnizo/logo.jpg" alt="juansguarnizo logo" class="ch-logo">
+            <div class="ch-meta">
+              <div class="ch-name">juansguarnizo</div>
+              <div class="ch-sub">1.8K espectadores</div>
+            </div>
+          </li>
+          <li class="channel-item">
+            <img src="CANAL/Thegrefg/logo.jpg" alt="Thegrefg logo" class="ch-logo">
+            <div class="ch-meta">
+              <div class="ch-name">TheGrefg</div>
+              <div class="ch-sub">5.4K espectadores</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <section class="hero">
+        <div class="hero-inner">
+          <h1>Bienvenido a Twitch</h1>
+          <p>Descubre los mejores streamers en vivo</p>
+
+          <div class="carousel" id="carousel">
+            <div class="carousel-controls left">
+              <button id="prevBtn" class="carousel-btn prev" aria-label="Anterior">◀</button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-item" data-channel="EmiillioR">
+              <video muted playsinline preload="metadata" poster="CANAL/EmiillioR/portada-1.png" src="CANAL/EmiillioR/video.mp4"></video>
+              <div class="item-overlay"><div class="item-title">EmiillioR</div></div>
+            </div>
+
+            <div class="carousel-item" data-channel="juansguarnizo">
+              <video muted playsinline preload="metadata" poster="CANAL/juansguarnizo/portada-1.png" src="CANAL/juansguarnizo/video.mp4"></video>
+              <div class="item-overlay"><div class="item-title">juansguarnizo</div></div>
+            </div>
+
+            <div class="carousel-item" data-channel="Thegrefg">
+              <video muted playsinline preload="metadata" poster="CANAL/Thegrefg/portada-1.png" src="CANAL/Thegrefg/video.mp4"></video>
+              <div class="item-overlay"><div class="item-title">TheGrefg</div></div>
+            </div>
+              </div>
+            </div>
+            <div class="carousel-controls right">
+              <button id="nextBtn" class="carousel-btn next" aria-label="Siguiente">▶</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section-live">
+        <h2>En directo ahora</h2>
+        <div class="grid-cards" id="streams-list">
+          <!-- Ejemplos de cards -->
+          <article class="stream-card">
+            <div class="thumb">
+              <span class="badge">LIVE</span>
+            </div>
+            <div class="card-body">
+              <div class="title">Streaming en vivo</div>
+              <div class="channel">Gaming Pro</div>
+              <div class="viewers">1,250 espectadores</div>
+            </div>
+          </article>
+
+          <article class="stream-card">
+            <div class="thumb"><span class="badge">LIVE</span></div>
+            <div class="card-body"><div class="title">Producción de música</div><div class="channel">Music Live</div><div class="viewers">856 espectadores</div></div>
+          </article>
+
+          <article class="stream-card">
+            <div class="thumb"><span class="badge">LIVE</span></div>
+            <div class="card-body"><div class="title">Dibujo digital en vivo</div><div class="channel">Art Studio</div><div class="viewers">432 espectadores</div></div>
+          </article>
+
+          <article class="stream-card">
+            <div class="thumb"><span class="badge">LIVE</span></div>
+            <div class="card-body"><div class="title">Programación en vivo</div><div class="channel">Dev Workshop</div><div class="viewers">2,100 espectadores</div></div>
+          </article>
+
+          <article class="stream-card">
+            <div class="thumb"><span class="badge">LIVE</span></div>
+            <div class="card-body"><div class="title">Videojuegos retro</div><div class="channel">Retro Gaming</div><div class="viewers">654 espectadores</div></div>
+          </article>
+
+          <article class="stream-card">
+            <div class="thumb"><span class="badge">LIVE</span></div>
+            <div class="card-body"><div class="title">Competencia de esports</div><div class="channel">Pro League</div><div class="viewers">5,420 espectadores</div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../shared/js/utils.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

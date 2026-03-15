@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clon de Facebook</title>
+    <link rel="stylesheet" href="../shared/styles/shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body class="dark">
+    <!-- Header principal -->
+    <header id="main-header">
+        <div class="header-brand-search">
+            <div class="logo">
+                <!-- Updated Facebook-style 'f' in circle (larger) -->
+                <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="22" cy="22" r="22" fill="#1877f2" />
+                    <path d="M27.6 15.6h-2.2c-1.6 0-2 0.8-2 2v1.8h4.2l-0.6 3.4h-3.6V31h-3.8v-7.4H17v-3.4h2.4v-1.8c0-2.2 1.2-3.6 3.4-3.6h2.8v3.6z" fill="#fff"/>
+                </svg>
+            </div>
+            <form class="search-form" role="search">
+                <button type="button" class="search-icon" aria-hidden="true">🔍</button>
+                <input type="search" placeholder="Buscar" aria-label="Buscar" />
+            </form>
+        </div>
+
+        <div class="header-nav">
+            <nav class="main-nav" aria-label="Navegación principal">
+                <button class="nav-btn active" aria-label="Inicio">🏠</button>
+                <button class="nav-btn" aria-label="Watch">🎬</button>
+                <button class="nav-btn" aria-label="Marketplace">🛒</button>
+                <button class="nav-btn" aria-label="Grupos">👥</button>
+                <button class="nav-btn" aria-label="Gaming">🎮</button>
+            </nav>
+        </div>
+
+        <div class="header-actions">
+            <button id="dark-toggle" class="action-btn" aria-label="Modo nocturno" type="button">🌙</button>
+            <button class="action-btn grid-btn" aria-label="Aplicaciones" type="button">▦</button>
+            <button class="action-btn" aria-label="Mensajes" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#050505" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="action-btn" aria-label="Notificaciones" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11c0-3.07-1.639-5.64-4.5-6.32V4a1.5 1.5 0 0 0-3 0v.68C7.64 5.36 6 7.929 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5" stroke="#050505" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="profile-btn" aria-label="Perfil" type="button">Perfil</button>
+        </div>
+
+        <div class="header-more" aria-hidden="true">
+            <!-- Espacio para futuros iconos/ajustes -->
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Lateral izquierdo -->
+        <aside id="left-sidebar">
+            <section class="profile-card">
+                <img src="img/perfil.jpg" alt="Perfil" class="profile-pic" />
+                <div class="profile-name">Nombre Usuario</div>
+            </section>
+
+            <nav class="sidebar-menu" aria-label="Menú lateral">
+                <button class="sidebar-item">
+                    <span class="sidebar-icon">🏠</span>
+                    <span class="sidebar-text">Inicio</span>
+                </button>
+                <button class="sidebar-item">
+                    <span class="sidebar-icon">📄</span>
+                    <span class="sidebar-text">Páginas</span>
+                </button>
+                <button class="sidebar-item">
+                    <span class="sidebar-icon">👥</span>
+                    <span class="sidebar-text">Grupos</span>
+                </button>
+                <button class="sidebar-item">
+                    <span class="sidebar-icon">📅</span>
+                    <span class="sidebar-text">Eventos</span>
+                </button>
+
+                <div class="more-toggle">
+                    <button id="see-more-btn" class="sidebar-item"> 
+                        <span class="sidebar-icon">⋯</span>
+                        <span class="sidebar-text">See more</span>
+                    </button>
+                </div>
+
+                <div id="more-items" class="more-items" hidden>
+                    <button class="sidebar-item">
+                        <span class="sidebar-icon">📢</span>
+                        <span class="sidebar-text">Ads</span>
+                    </button>
+                    <button class="sidebar-item">
+                        <span class="sidebar-icon">🎁</span>
+                        <span class="sidebar-text">Birthdays</span>
+                    </button>
+                    <button class="sidebar-item">
+                        <span class="sidebar-icon">🤖</span>
+                        <span class="sidebar-text">Chat with AIs</span>
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Contenido central -->
+        <main id="main-content">
+            <!-- 1. Contenedor para realizar una publicación -->
+            <section class="create-post">
+                <img src="img/perfil.jpg" alt="Perfil" class="post-profile-pic" />
+                <div class="post-compose">
+                    <textarea placeholder="¿Qué estás pensando?" rows="3" aria-label="Escribir publicación"></textarea>
+                    <div class="post-options">
+                        <button class="opt-btn">🔴 Live</button>
+                        <button class="opt-btn">📷 Fotos</button>
+                        <button class="opt-btn">😊 Emojis</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Contenedor de historias -->
+            <section class="stories" aria-label="Historias">
+                <button class="story" data-large="img/dalthon-2.png" style="background-image:url('img/dalthon.png')" aria-label="Historia Dalthon">
+                    <div class="story-name">Dalthon</div>
+                </button>
+                <button class="story" data-large="img/emanuel-2.png" style="background-image:url('img/emanuel.png')" aria-label="Historia Emanuel">
+                    <div class="story-name">Emanuel</div>
+                </button>
+            </section>
+
+            <!-- 3. Publicaciones / Feed (se llenará con embeds o posts) -->
+            <section id="feed" class="feed">
+                <!-- Ejemplo de post (puedes reemplazar por iframes desde data.json) -->
+                <article class="post-card">
+                    <div class="post-header">ExpresoEC · Publicado</div>
+                    <div class="post-body">
+                        <div class="embed-wrap">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fexpresoec%2Fposts%2Fpfbid0eGSyTwfa7g5NnnAbzJUEKveSprp69ki6Smrni4UMnKbYepD2ca66BXq81wPx1hwtl&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-header">Cultocinefilook · Publicado</div>
+                    <div class="post-body">
+                        <div class="embed-wrap">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcultocinefilook%2Fposts%2Fpfbid0LSZETHbBEryC8V1rBBoJmxz7dhZZdRtG5MYgJgyDKyRYj4BrXygjgFrL8xQdmk7zl&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-header">Reel · Publicado</div>
+                    <div class="post-body">
+                        <div class="embed-wrap">
+                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1610708833502160%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-header">Radio Andinario Bamba · Publicado</div>
+                    <div class="post-body">
+                        <div class="embed-wrap">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fradioandinariobamba%2Fposts%2Fpfbid02XFkQRz8hSEVfpjma3FxitkgXBj6z4igUrjQbS1M237yhPDBuVJRfDLNmThCfk779l&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-header">Darwin Camacho · Publicado</div>
+                    <div class="post-body">
+                        <div class="embed-wrap">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdarwin.camacho.14811%2Fposts%2Fpfbid0hnnEh8mu6VfHtLyQqrEucFLvnf8eQGPPedVqY7DosTvY6KB73QPPhx3ox3LGoLual&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- Lateral derecho -->
+        <aside id="right-sidebar">
+            <section class="ad-card">Publicidad</section>
+            <section class="contacts-list">
+                <h4>Amigos conectados</h4>
+                <div class="contact">Amigo 1</div>
+                <div class="contact">Amigo 2</div>
+            </section>
+        </aside>
+    </div>
+
+    <!-- Story modal -->
+    <div id="story-modal" class="story-modal" role="dialog" aria-hidden="true">
+        <div class="modal-content" id="modal-content">
+            <button class="close-btn" id="story-close" aria-label="Cerrar">✕</button>
+        </div>
+    </div>
+
+    <script src="../shared/js/utils.js" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

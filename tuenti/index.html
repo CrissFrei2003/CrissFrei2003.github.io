@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>Tuenti — Proyecto</title>
+    <link rel="stylesheet" href="../shared/styles/shared.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="app tuenti-app" role="main">
+        <!-- Section Header -->
+        <section class="section-header">
+            <div class="cont-header">
+                <div class="header-left">
+                    <h1 class="titulo" id="titulo">Tuenti</h1>
+                    <p class="subtitulo" id="subtitulo">Clon de interfaz móvil</p>
+                </div>
+                <div class="header-price" id="header-price">$15,000</div>
+            </div>
+        </section>
+
+        <!-- Section Anuncios - optionally show a static header ad -->
+        <section class="section-static-ad">
+             <div class="carousel-container">
+                <h2 class="anuncios-title">Anuncios</h2>
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Carousel items populated from data.json -->
+                </div>
+            <img src="img/anuncio.png" alt="Anuncio promocional" class="static-ad-img">
+        </section>
+
+        <section class="section-anuncios" id="app-anuncios">
+            
+        </section>
+
+        <!-- Section Carta/Plan -->
+        <section class="section-carta" id="app-carta">
+            <!-- plan card -->
+        </section>
+
+        <!-- Section Servicios -->
+        <section class="section-servicios" id="app-servicios">
+            <!-- servicios grid -->
+        </section>
+
+        <!-- Section Paquetes (target for carousel links) -->
+        <section class="section-paquetes" id="app-paquetes">
+            <div class="paquetes-content" style="padding:16px;">
+                <h2>Paquetes</h2>
+                <p>Esta es la pantalla de paquetes. Aquí se mostrarán las ofertas disponibles.</p>
+            </div>
+        </section>
+
+        <!-- Menu nav fixed at bottom -->
+        <nav class="app-menu" id="app-menu" aria-label="Navegación principal">
+            <!-- menu items -->
+        </nav>
+    </main>
+
+    <script src="../shared/js/utils.js" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

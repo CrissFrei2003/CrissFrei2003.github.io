@@ -1,0 +1,53 @@
+/* Estilos para la intro enmascarada dentro del título */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:0;background:#0b0b0f;display:flex;align-items:center;justify-content:center}
+.intro{width:100%;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px}
+.hero-title{font-weight:900;letter-spacing:6px;text-transform:uppercase;margin:0;line-height:0.85;
+	font-size:clamp(72px,18vw,220px);
+	-webkit-text-fill-color:transparent;
+	-webkit-background-clip:text;
+	background-clip:text;
+	-webkit-text-stroke:2px rgba(255,255,255,0.9);
+	color:transparent;
+	background-size:cover;
+	background-position:center;
+	/* animación de 5s que recorre 13 imágenes */
+	animation: bgCycle 5s linear infinite;
+}
+.subtitle{color:rgba(255,255,255,0.75);margin-top:18px;font-size:1rem}
+
+/* Los keyframes se generan dinámicamente en tiempo de ejecución
+	 por `script.js` para soportar extensiones variadas en la carpeta `img`.
+	 La animación usa el nombre de la animación `bgCycle` (5s linear infinite).
+	 Asegúrate de tener la carpeta `img` junto a este `index.html` (../img desde aquí). */
+
+/* Mantener el estilo del fondo en el texto */
+.hero{position:relative;width:100%;min-height:60vh;display:flex;align-items:center;justify-content:center}
+.layers{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.layer{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;
+	-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-repeat:no-repeat;background-position:center;background-size:100% auto;opacity:0}
+
+/* Outline encima mostrando solo el borde del texto */
+.outline{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;line-height:0.9;
+	font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:clamp(72px,18vw,220px);
+	-webkit-text-fill-color:transparent;-webkit-background-clip:text;background-clip:text;color:transparent;
+	-webkit-text-stroke:1px rgba(255,255,255,0.95)}
+
+/* mejora de contraste fuera del título */
+.intro::before{content:'';position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.6));pointer-events:none}
+
+@media (max-width:600px){.hero-title{font-size:64px}}
+
+/* Override para reducir grosor del borde y controlar líneas */
+
+.outline span,.layer span{display:block;line-height:0.9}
+
+
+/* ajustar tamaño y separación en móviles */
+@media (max-width:420px){.hero-title{letter-spacing:1px;gap:4px}}
+
+/* En pantallas pequeñas usamos 'cover' para evitar recortes extraños */
+@media (max-width:600px){
+	.hero-title{background-size:cover}
+}
