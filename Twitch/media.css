@@ -1,5 +1,0 @@
-/* Media queries específicos para Twitch */
-@media (max-width:600px) {
-  .cards { grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); }
-  .thumb { height:100px; }
-}
