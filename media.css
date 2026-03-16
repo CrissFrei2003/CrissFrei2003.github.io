@@ -1,0 +1,28 @@
+/* Archivo para media queries y responsividad del clon de Facebook */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 900px) {
+    #left-sidebar, #right-sidebar {
+        display: none;
+    }
+    .container {
+        max-width: 100vw;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #main-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
