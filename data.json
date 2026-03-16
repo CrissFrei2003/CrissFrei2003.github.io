@@ -1,0 +1,99 @@
+{
+  "nombre": "Cristina Freire",
+  "titulo": "Diseñadora Gráfica & Desarrolladora Web",
+  "profile_pic": "img/perfil.jpg",
+  "bio": "Soy estudiante de diseño gráfico con interés en desarrollo web y creación de experiencias visuales centradas en usuarios.",
+  "contact": {
+    "email": "cristina.ejemplo@mail.com",
+    "telefono": "+593-9XX-XXX-XXX",
+    "ubicacion": "Ecuador"
+  },
+  "socials": [
+    { "name": "GitHub", "url": "https://github.com/cristina" },
+    { "name": "Behance", "url": "https://behance.net/cristina" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/cristina" }
+  ],
+  "badges": ["Estudios universitarios en curso","Prototipado con IA","Desarrollo Front-end básico"],
+  "about": {
+    "titulo": "Mi historia",
+    "texto": "Combino formación en diseño gráfico con proyectos prácticos de interfaz y prototipado. Me gusta transformar ideas en productos visuales y funcionales."
+  },
+  "skills": [
+    { "categoria": "Diseño", "items": ["Adobe Photoshop","Illustrator","Figma","Prototipado"] },
+    { "categoria": "Web", "items": ["HTML","CSS","JavaScript","Responsive Design"] }
+  ],
+  "projects": [
+    {
+      "id": "youtube-clone",
+      "nombre": "Clon YouTube",
+      "folder": "proyectos/Youtube/",
+      "descripcion": "Interfaz tipo YouTube con grid de videos, shorts y sidebar.",
+      "thumbnail": "proyectos/Youtube/canal/short.png",
+      "demo": "proyectos/Youtube/index.html",
+      "tipo": "web",
+      "anio": 2026,
+      "tecnologias": ["HTML","CSS","JS"],
+      "rol": "Diseño UI / maquetación"
+    },
+    {
+      "id": "tuenti-clone",
+      "nombre": "Tuenti — Interfaz móvil",
+      "folder": "proyectos/tuenti/",
+      "descripcion": "Clon de interfaz móvil con componentes de plan y carousel.",
+      "thumbnail": "proyectos/tuenti/img/anuncio.png",
+      "demo": "proyectos/tuenti/index.html",
+      "tipo": "mobile",
+      "anio": 2026,
+      "tecnologias": ["HTML","CSS","JS"],
+      "rol": "Diseño visual / prototipo"
+    },
+    {
+      "id": "facebook-clone",
+      "nombre": "Clon Facebook",
+      "folder": "proyectos/Facebook/",
+      "descripcion": "Maquetación de feed y sidebars para práctica UX.",
+      "thumbnail": "proyectos/Facebook/img/perfil.jpg",
+      "demo": "proyectos/Facebook/index.html",
+      "tipo": "web",
+      "anio": 2026,
+      "tecnologias": ["HTML","CSS","JS"],
+      "rol": "Maquetación"
+    }
+    ,
+    {
+      "id": "animacion-showcase",
+      "nombre": "Animación — Portfolio",
+      "folder": "proyectos/animacion/",
+      "descripcion": "Serie de trabajos y pruebas de animación y frame-by-frame.",
+      "thumbnail": "proyectos/animacion/animacion/11.avif",
+      "demo": "proyectos/animacion/slider/index.html",
+      "tipo": "visual",
+      "anio": 2025,
+      "tecnologias": ["GIF","Frame-by-frame","After Effects"],
+      "rol": "Animación / Producción"
+    },
+    {
+      "id": "twitch-collection",
+      "nombre": "Twitch — Canales",
+      "folder": "proyectos/Twitch/",
+      "descripcion": "Colección de canales y layouts para streaming.",
+      "thumbnail": "img/logo.png.png",
+      "demo": "proyectos/Twitch/index.html",
+      "tipo": "web",
+      "anio": 2024,
+      "tecnologias": ["HTML","CSS","OBS"],
+      "rol": "Diseño visual"
+    }
+  ],
+  "gallery": ["img/img 1.jpg","img/img 2.jpg","img/img 3.jpg","img/img 4.jpg"],
+  "education": [
+    { "institucion": "Escuela Superior Politécnica", "titulo": "Diseño Gráfico (en curso)", "desde": 2022 }
+  ],
+  "experience": [
+    { "puesto": "Proyectos personales", "descripcion": "Desarrollo de clones y muestras de UI para portafolio" }
+  ],
+  "meta": {
+    "theme": "dark",
+    "locale": "es-EC"
+  }
+}
